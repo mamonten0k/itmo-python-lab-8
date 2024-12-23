@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package dictionary;
+
+// Messages for RPCs
+
+message Term {
+    string name = 1;
+    string description = 2;
+}
+
+message TermResponse {
+    Term term = 1;
+}
+
+// Add Term
+message AddTermRequest {
+    Term term = 1;
+}
+
+// Get Term
+message GetTermRequest {
+    string name = 1;
+}
+
+// Update Term
+message UpdateTermRequest {
+    string name = 1;
+    string description = 2;
+}
+
+// Delete Term
+message DeleteTermRequest {
+    string name = 1;
+}
+
+message DeleteTermResponse {
+    string message = 1;
+}
+
+// List All Terms
+message ListTermsResponse {
+    repeated Term terms = 1; // Array of terms
+}
+
+// Empty Message
+message Empty {}
+
+// Service definition for the dictionary CRUD API
+service Dictionary {
+    // Add a new term
+    rpc AddTerm (AddTermRequest) returns (TermResponse);
+
+    // Get a term by name
+    rpc GetTerm (GetTermRequest) returns (TermResponse);
+
+    // Update an existing term
+    rpc UpdateTerm (UpdateTermRequest) returns (TermResponse);
+
+    // Delete a term by name
+    rpc DeleteTerm (DeleteTermRequest) returns (DeleteTermResponse);
+
+    // List all terms in the dictionary
+    rpc ListTerms (Empty) returns (ListTermsResponse);
+}
