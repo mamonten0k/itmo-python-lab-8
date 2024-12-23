@@ -26,25 +26,25 @@ cd <имя_репозитория>
 ```
 
 ### Структура проекта
-project_root/
-├── app/
-│   ├── __init__.py
-│   ├── api.py
-│   ├── server.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── database.py
-│   ├── seed.py
-│   ├── protobufs/
-│   │   ├── __init__.py
-│   │   └── dictionary.proto
-│   └── static/
-│       ├── index.html
-│       └── main.js
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+project_root/  
+├── app/  
+│   ├── __init__.py  
+│   ├── api.py  
+│   ├── server.py  
+│   ├── models.py  
+│   ├── schemas.py  
+│   ├── database.py  
+│   ├── seed.py  
+│   ├── protobufs/  
+│   │   ├── __init__.py  
+│   │   └── dictionary.proto  
+│   └── static/  
+│       ├── index.html  
+│       └── main.js  
+├── Dockerfile  
+├── docker-compose.yml  
+├── requirements.txt  
+└── README.md  
 
 ## Запуск приложения
 Последовательно команды:
