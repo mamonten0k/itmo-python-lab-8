@@ -1,7 +1,9 @@
 version: "3.8"
 services:
   server:
-    build: .
+    build:
+      context: .
+      platform: linux/amd64
     ports:
       - "50051:50051"
-      - "8000:8000"
+      - "8081:8000"

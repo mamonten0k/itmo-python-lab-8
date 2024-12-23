@@ -56,18 +56,18 @@ docker-compose build
 ```
 docker-compose up
 ```
-Контейнер запустит серверное приложение на основе FastAPI на порту 8000 и gRPC-сервер на порту 50051.
+Контейнер запустит серверное приложение на основе FastAPI на порту 8081 и gRPC-сервер на порту 50051.
 
-По адресу: http://localhost:8000/  
+По адресу: http://localhost:8081/  
 Можно посмотреть веб-приложение, визуализирующее семантический граф.  
 
 ### API Эндпоинты
 Сервис предоставляет REST API для взаимодействия с данными. Основные эндпоинты:
 
 GET /terms/: Получение списка всех терминов.  
-curl http://localhost:8000/terms/  
+curl http://localhost:8081/terms/  
 
 GET /relationships/: Получение списка всех связей между терминами.  
-curl http://localhost:8000/relationships/  
+curl http://localhost:8081/relationships/  
 
-Автодокументация Swagger UI: доступна по адресу http://localhost:8000/docs  
+Автодокументация Swagger UI: доступна по адресу http://localhost:8081/docs  
