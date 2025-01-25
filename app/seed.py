@@ -4,47 +4,47 @@ import models
 DEFAULT_TERMS = [
     {
         "name": "Flutter",
-        "description": "Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+        "description": "Флаттер это UI-инструментарий от Google для разработки нативно компилируемых приложений для мобильных платформ, веба и настольных устройств на основе одного исходного кода.",
     },
     {
         "name": "Dart",
-        "description": "Dart is the programming language used to write Flutter applications.",
+        "description": "Dart — это язык программирования, используемый для создания приложений на Flutter. Dart ориентирован на разработку интерфейсов, имеет строгую типизацию и поддерживает как JIT, так и AOT-компиляцию.",
     },
     {
         "name": "Widget",
-        "description": "Widgets are the basic building blocks of a Flutter app's user interface. Each widget is an immutable declaration of part of the user interface.",
+        "description": "Виджеты — это базовые строительные блоки пользовательского интерфейса приложения Flutter. Каждый виджет является неизменяемым описанием части интерфейса и определяет, как отображается или взаимодействует компонент.",
     },
     {
         "name": "StatelessWidget",
-        "description": "A widget that does not require mutable state. Stateless widgets are immutable.",
+        "description": "Виджет, который не имеет изменяемого состояния. Такие виджеты остаются неизменными на протяжении всего времени существования. Они используются для отображения статической информации.",
     },
     {
         "name": "StatefulWidget",
-        "description": "A widget that has mutable state. A stateful widget can change its appearance in response to events.",
+        "description": "Виджет, который имеет изменяемое состояние. Такие виджеты могут обновлять свое представление при изменении состояния и реагировать на события в приложении.",
     },
     {
         "name": "State",
-        "description": "State is information that can be read synchronously when the widget is built and might change during the lifetime of the widget.",
+        "description": "Состояние — это информация, которая может быть считана синхронно во время построения виджета и может изменяться в течение его жизненного цикла. State управляет тем, как объект реагирует на изменения данных.",
     },
     {
         "name": "MaterialApp",
-        "description": "A widget that wraps several widgets commonly required for material design applications.",
+        "description": "Виджет, который оборачивает несколько других виджетов, необходимых для создания приложений на основе Material Design. Он предоставляет основные функции навигации, темы и локализации.",
     },
     {
         "name": "Scaffold",
-        "description": "Implements the basic material design visual layout structure.",
+        "description": "Scaffold предоставляет базовую структуру визуального интерфейса Material Design, включая AppBar, Drawer и FAB (плавающая кнопка действия).",
     },
     {
         "name": "BuildContext",
-        "description": "A handle to the location of a widget in the widget tree.",
+        "description": "Ссылка на расположение виджета в дереве виджетов. Он используется для предоставления информации о структуре интерфейса и обращения к родительским или дочерним виджетам.",
     },
     {
         "name": "setState",
-        "description": "Notifies the framework that the internal state of this object has changed.",
+        "description": "Метод уведомляет фреймворк Flutter о том, что внутреннее состояние объекта изменилось. Это вызывает повторное построение виджета, чтобы отобразить изменения.",
     },
     {
         "name": "Pub",
-        "description": "Pub is the package manager for the Dart programming language, used to manage dependencies for Flutter projects.",
+        "description": "Менеджер пакетов для языка программирования Dart. Он используется для управления зависимостями в проектах Flutter и Dart, включая установку сторонних библиотек.",
     },
 ]
 

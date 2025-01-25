@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Список терминов</title>
+  <link rel="stylesheet" href="/static/common.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px;
+    }
+    th {
+      background-color: #607D8B;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="container">
+    <div class="nav">
+      <a href="/">Семантический граф</a>
+      <a href="/terms" class="active">Список терминов</a>
+    </div>
+  </nav>
+  <div class="divider"></div>
+  <main class="container">
+    <h1>Список терминов</h1>
+    <table id="terms-table">
+      <thead>
+        <tr>
+          <th>Термин</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </main>
+  <div class="divider"></div>
+  <footer class="container">
+    <a href="https://my.itmo.ru/persons/282973" target="_blank">
+      Лобанов Иван, университет ИТМО, 2024 г.
+    </a>
+  </footer>
+  <script src="/static/terms.js"></script>
+</body>
+</html>

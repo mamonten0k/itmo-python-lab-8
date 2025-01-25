@@ -1,0 +1,53 @@
+body, 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  padding-block: 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #333;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover,
+a.active {  
+  text-decoration: underline;
+}
+.nav {
+  margin-bottom: 20px;
+}
+.nav a {
+  color: #333;
+  margin-right: 15px;
+}
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+main {
+  padding-bottom: 20px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+footer a {
+  margin-inline: center;
+}

@@ -2,33 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Semantic Graph MindMap</title>
+  <title>Семантический граф</title>
+  <link rel="stylesheet" href="/static/common.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"></script>
   <style>
-    body {
-      margin: 0;
-    }
     #network {
       width: 100%;
-      height: 100vh;
+      height: 70vh;
     }
     #modal {
       position: relative;
+      width: 600px;
     }
     #close-button {
       position: absolute;
       top: 16px;
       right: 16px;
+      cursor: pointer;
+    }
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+    .active {
+      text-decoration: underline;
+    }
+    .description {
+      font-size: 16px;
+      padding-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div id="network"></div>
+  <nav class="container">
+    <div class="nav">
+      <a href="/" class="active">Семантический граф</a>
+      <a href="/terms">Список терминов</a>
+    </div>
+  </nav>
+  <div class="divider"></div>
+  <main class="container">
+    <h1>Семантический граф</h1>
+    <p class="description">
+      Нажмите на узел семантического графа, чтобы посмотреть определение термина.</br>
+      Также это можно сделать, перейдя по ссылке на список терминов в шапке страницы.
+    </p>
+    <div id="network"></div>
+  </main>
   <dialog id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-content">
     <h2 id="modal-title"></h2>
     <p id="modal-content"></p>
-    <button id="close-button">Close</button>
+    <button id="close-button">Закрыть</button>
   </dialog>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"></script>
+  <div class="divider"></div>
+  <footer class="container">
+    <a href="https://my.itmo.ru/persons/282973" target="_blank">
+      Лобанов Иван, университет ИТМО, 2024 г.
+    </a>
+  </footer>
   <script src="/static/index.js"></script>
 </body>
 </html>

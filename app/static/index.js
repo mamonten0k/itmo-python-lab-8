@@ -1,6 +1,6 @@
 async function fetchData() {
-  const termsResponse = await fetch('/terms/');
-  const relationshipsResponse = await fetch('/relationships/');
+  const termsResponse = await fetch('/api/terms/');
+  const relationshipsResponse = await fetch('/api/relationships/');
 
   const terms = await termsResponse.json();
   const relationships = await relationshipsResponse.json();
@@ -50,17 +50,22 @@ function createGraph(data) {
       {
         selector: 'node',
         style: {
-          'cursor': 'pointer',
+          'cursor': 'default',
           'label': 'data(label)',
           'text-valign': 'center',
           'text-halign': 'center',
+          'text-wrap': 'wrap',
+          'text-max-width': '70px',
           'background-color': '#607D8B',
           'color': '#fff',
-          'font-size': '12px',
-          'width': '70px',
-          'height': '70px',
-          'shape': 'ellipse',
+          'font-size': '10px',
+          'width': '100px',
+          'height': '30px',
+          'shape': 'rectangle',
           'overlay-opacity': 0,
+          'border-width': 1,
+          'border-color': '#37474F',
+          'border-radius': '8px',
         },
       },
       {
@@ -69,7 +74,8 @@ function createGraph(data) {
           'label': 'data(label)',
           'curve-style': 'bezier',
           'target-arrow-shape': 'triangle',
-          'arrow-scale': 1.5,
+          'width': 1,
+          'arrow-scale': 1,
           'line-color': '#B0BEC5',
           'target-arrow-color': '#B0BEC5',
           'color': '#37474F',
@@ -80,26 +86,19 @@ function createGraph(data) {
           'text-border-color': '#CFD8DC',
           'text-border-width': 1,
           'text-border-opacity': 1,
-          'text-background-padding': 2,
-        },
-      },
-      {
-        selector: 'edge:hover',
-        style: {
-          'line-color': '#546E7A',
-          'target-arrow-color': '#546E7A',
+          'text-background-padding': 4,
         },
       },
     ],
     layout: {
       name: 'grid',
-      rows: 3,
-      cols: 4,
-      padding: 10,
+      rows: 6,
+      cols: 2,
+      padding: 20,
       fit: true,
     },
-    userZoomingEnabled: true,
-    userPanningEnabled: true,
+    userZoomingEnabled: false,
+    userPanningEnabled: false,
   });
 
   cy.on('tap', 'node', function(evt) {
@@ -113,7 +112,6 @@ function createGraph(data) {
 
   const debounce = (callback, interval = 0) => {
     let prevTimeoutId;
-
     return (...args) => {
       prevTimeoutId = setTimeout(() => {
         callback(args);

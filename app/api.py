@@ -35,12 +35,16 @@ templates = Jinja2Templates(directory="static")
 async def read_index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.get("/terms/", response_model=List[TermSchema])
+@app.get("/terms/", response_class=HTMLResponse)
+async def terms_list(request: Request):
+    return templates.TemplateResponse("terms.html", {"request": request})
+
+@app.get("/api/terms/", response_model=List[TermSchema])
 def read_terms(db: Session = Depends(get_db)):
     terms = db.query(models.Term).all()
     return terms
 
-@app.get("/relationships/", response_model=List[RelationshipSchema])
+@app.get("/api/relationships/", response_model=List[RelationshipSchema])
 def read_relationships(db: Session = Depends(get_db)):
     relationships = db.query(models.Relationship).all()
     return relationships
